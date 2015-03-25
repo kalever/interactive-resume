@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Resume</title>
+  <!-- Load the page styles. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script src="js/jQuery.js"></script>
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
+  <!--
+  Uncomment the <script> tag below when you're ready to add an interactive
+  Google Map to your resume!
+  -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div class= "container">
+        <div class = "row">
+             <div class="col-md-12">
+                <div class="black-stuff">
+                            <div id ="contactWrap">
+                                 <ul id="topContacts" class='flex-box center-content'></ul>
+                            </div>
+                            <div id="logo"></div>
+                            <div id="themeOne" class="theme margin-top themeOne"><span></span></div>
+                            <div id="themeTwo" class="theme themeTwo"><span></span></div>
+                </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                        <div id="header" class="clearfix">
+                          <div id="toggleHeader" class="well">
+                          </div>
+                        </div>
+                    <div style='clear: both;'></div>
+                      <div id ="toggleWork">
+                           <h2><span class="glyph-icon glyphicon-plus glyphIcon"></span>Work Experience</h2>
+                         <div id="workExperience"></div>
+                      </div>
+                    <div id="toggleProjects">
+                            <h2><span class="glyph-icon glyphicon-plus glyphIcon"></span>Projects</h2>
+                         <div id="projects">
+                        </div>
+                    </div>
+                    <div id="toggleEducation">
+                          <h2><span class="glyph-icon glyphicon-plus glyphIcon"></span>Education</h2>
+                       <div id="education">
+                      </div>
+                    </div>
+                      <h2 id="mapToggle"><span class="glyph-icon glyphicon-plus glyphIcon"></span><span class="hoverShadow">Where I've Lived and Worked</span></h2>
+                    <div id="toggleMap">
+                      <div id="mapDiv"></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+  <div id="footerBg" class="container">
+        <div class ="row">
+           <div class = "col-md-2"></div>
+            <div class="col-md-8">
+                <div id="letsConnect" class='dark-gray center-text'>
+                     <ul id="footerContacts" class="flex-box">
+                     </ul>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+   </div>
+  <div class="blackDiv">
+  </div>
+  <script src="js/resumeBuilder.js"></script>
+  <script type="text/javascript">
+    if(document.getElementsByClassName('flex-item').length === 0) {
+     //document.getElementById('topContacts').style.display = 'none';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.display = 'none';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.display = 'none';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.display = 'none';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.display = 'none';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
